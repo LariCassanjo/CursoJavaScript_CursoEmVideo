@@ -42,7 +42,8 @@
     var nome = window.prompt('Mas primeiro, me diga o seu nome: ')
     
     document.write('Olá, ' + nome + '!')
-
+    document.write(`Seu nome tem <strong>${nome.length}</strong> letras.`)
+    document.write(`<br/>Todo em letras maiúsculas, fica <strong>${nome.toUpperCase()}</strong>.`)
     
 
     window.alert('Vamos somar dois números!')
