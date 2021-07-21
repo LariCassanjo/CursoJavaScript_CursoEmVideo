@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interagindo</title>
+</head>
+<style>
+
+    div#corpo{
+        color: white;
+        font: bold 30pt Arial;
+    }
+
+    body{
+        background-color: turquoise;
+        color: black;
+        font: normal 15pt Arial;
+    }
+
+</style>
+<body>
+    <div id="corpo">
+        <h1>Escola Cassanjo</h1>
+        <p></p>
+    </div>
+</body>
+<script>
+
+    window.alert('Esse é o site de acesso à aprovação ou reprovação dos alunos da Escola Cassanjo.')
+    var aluno = window.prompt('Por gentileza, digite o nome do aluno que deseja ver as médias.')
+    var por = Number(window.prompt(`Digite a nota de ${aluno} em Lingua Portuguesa: `))
+    var mat = Number(window.prompt(`Digite a nota de ${aluno} em Matemática: `))
+    var geo = Number(window.prompt(`Digite a nota de ${aluno} em Geografia: `))
+    var his = Number(window.prompt(`Digite a nota de ${aluno} em História: `))
+    var cie = Number(window.prompt(`Digite a nota de ${aluno} em Ciências: `))
+    var m = (por + mat + geo + his + cie) / 5
+
+    document.write(`Vamos conferir as notas desse aluno(a):`)
+    document.write(`<br/>As notas de ${aluno} resultaram na média de <strong>${m}</strong>.`)
+    var sit = m >= 7 ? "Aprovado" : "Reprovado"
+    document.write(`<br/>A situação de ${aluno} até este período é <strong>${sit}</strong>.`)
+    
+</script>
+</html>
