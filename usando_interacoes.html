@@ -35,11 +35,11 @@
     var geo = Number(window.prompt(`Digite a nota de ${aluno} em Geografia: `))
     var his = Number(window.prompt(`Digite a nota de ${aluno} em História: `))
     var cie = Number(window.prompt(`Digite a nota de ${aluno} em Ciências: `))
-    var m = (por + mat + geo + his + cie) / 5
+    var m = Number((por + mat + geo + his + cie) / 5).toFixed(2).replace('.',',')
 
     document.write(`Vamos conferir as notas desse aluno(a):`)
     document.write(`<br/>As notas de ${aluno} resultaram na média de <strong>${m}</strong>.`)
-    var sit = m >= 7 ? "Aprovado" : "Reprovado"
+    var sit = m >= '7,0' ? "Aprovado" : "Reprovado"
     document.write(`<br/>A situação de ${aluno} até este período é <strong>${sit}</strong>.`)
     
 </script>
